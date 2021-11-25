@@ -8,13 +8,13 @@ include "db-functions.php";
 <div id="gallery" class="container main">
     <?php
     foreach (findAllFilm() as $row) { ?>
-        <div class='figure box drop' style="background-image: url('img/<?php echo $row['affiche_film'] ?>');">
+        <div class='figure box vignette drop' style="background-image: url('img/<?php echo $row['affiche_film'] ?>');">
             <div class="txt">
                 <div>
                     <?php echo $row['nom_genre'] ?>
                 </div>
-                <div><h5>
-                    <?php echo "<a  href='ficheFilm.php?id=" . $row['ID_film'] . "'>" . $row['titre_film'] . "</a></h5>". $row['annee_sortie_film']  ?>
+                <div >
+                    <?php echo "<h5><a class='titreneon' href='ficheFilm.php?id=" . $row['ID_film'] . "'>" . $row['titre_film'] . "</a></h5>". $row['annee_sortie_film']  ?>
                 </div>
                 <div>
                     <a href='ficherealisateur.php?id=<?php echo $row['ID_realisateur'] ?>'><?php echo $row['nom_realisateur'] . " " . $row['prenom_realisateur'] ?></a>

@@ -1,7 +1,7 @@
-<header>
+<header class="box">
     <nav class="container">
-        <div class="nav container-fluid">
-            <a class=" nav-link btn btn-outline-dark" aria-current="page" href="index.php">
+        <div class="nav container-fluid ">
+            <a class=" nav-link btn btn-outline-dark " aria-current="page" href="index.php">
                 <img src="img/logo.svg" alt="" width="60" height="48" class="d-inline-block align-text-top">
             </a>
             <?php

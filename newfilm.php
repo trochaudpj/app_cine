@@ -10,8 +10,8 @@ if ($id && $film = findFilmById($id)) {
   $filmToUpdate = $film;
 }
 
-?><div class="container main ">
-  <div class="box" id="recap">
+?><div class="container  ">
+  <div class="box main" >
     <h1>New film</h1>
     <form method='POST' action='traitement.php?action=<?= $filmToUpdate ? "modifFilm" : "ajoutFilm" ?>&id=<?= $id ? $id : '' ?>'>
       <div class="row mb-3">

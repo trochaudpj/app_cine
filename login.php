@@ -6,9 +6,10 @@ include "function.php";
 include "db-functions.php";
 $id = filter_input(INPUT_GET, "id", FILTER_VALIDATE_INT);
 ?>
-<div class="container main ">
-  <div class="box" id="recap">
+<div class="container  ">
+  <div class="box main" >
     <main>
+    <h1>Login</h1>
         <form action="security.php?action=login" method="post">
             <p>
                 <label>

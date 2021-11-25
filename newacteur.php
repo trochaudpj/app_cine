@@ -9,9 +9,9 @@ $acteurToUpdate = null;
 if ($id && $acteur = findacteurById($id)) {
   $acteurToUpdate = $acteur;
 }
-var_dump($acteurToUpdate);
-?><div class="container main ">
-  <div class="box" id="recap">
+
+?><div class="container  ">
+  <div class="box main" id="recap">
     <h1>New acteur</h1>
     <form method='POST' action='traitement.php?action=<?= $acteurToUpdate ? "modifActeur" : "ajoutActeur" ?>&id=<?= $id ? $id : '' ?>'>
       <div class="row mb-3">

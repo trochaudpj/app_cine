@@ -10,8 +10,8 @@ if ($id && $realisateur = findrealById($id)) {
   $realisateurToUpdate = $realisateur;
 }
 
-?><div class="container main ">
-  <div class="box" id="recap">
+?><div class="container  ">
+  <div class="box main" >
     <h1>New réalisateur</h1>
     <form method='POST' action='traitement.php?action=<?= $realisateurToUpdate ? "modifRealisateur" : "ajoutRealisateur" ?>&id=<?= $id ? $id : '' ?>'>
       <div class="row mb-3">

@@ -11,13 +11,13 @@ if ($id && $personnage = findpersonnageById($id)) {
 }
 
 ?><div class="container main ">
-  <div class="box" id="recap">
+  <div class="box main">
     <h1>New Personnage</h1>
     <form method='POST' action='traitement.php?action=<?= $personnageToUpdate ? "modifPersonnage" : "ajoutPersonnage" ?>&id=<?= $id ? $id : '' ?>'>
-      <div class="row mb-3">
+      
         <label for="nom_personnage" class="col-sm-2 col-form-label" >Nom personnage</label>
         <input type="text" class="form-control" id="nom_personnage" name="nom_personnage" value='<?= $personnageToUpdate ? $personnageToUpdate["nom_personnage"] : "" ?>'>
-      </div>
+     
       <button type="submit" name="submit" class="btn btn-primary">Valider</button>
     </form>
   </div>
