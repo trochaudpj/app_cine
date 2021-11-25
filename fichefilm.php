@@ -10,16 +10,20 @@ include "db-functions.php";
     $film = findFilmById($_GET['id']);
 
     if ($film) { ?>
-        <div class=' box'>
-            <div class="screen">
-                <img src="img/<?php echo $film['affiche_film'] ?>" width="300px" alt="affiche du film">
-                <div class="container"><div>
+        <div class='screen box'>
+           
+                <div class="container"> <img src="img/<?php echo $film['affiche_film'] ?>" width="50%" alt="affiche du film">
+                <div>
+                    <div>
                     <h2><?php echo $film['titre_film'] . " " . $film['annee_sortie_film'] ?></h2>
+                </div>
+                    <div>
                     <a href='newfilm.php?id=<?php echo  $film['ID_film'] ?>' >éditer film</a>
-                    <h4><?php echo $film['nom_genre'] ?></h4></div>
+                </div><div>
+                    <h4><?php echo $film['nom_genre'] ?></h4></div><div>
                     <p>par : <a href='ficherealisateur.php?id=<?php echo $film['ID_realisateur'] ?>'><?php echo $film['nom_realisateur'] . " " . $film['prenom_realisateur'] ?></a> <br>
                         <em> <?php echo $film['synopsis_film'] ?></em>
-                    </p>
+                    </p></div>
                     <div>
                         <?php
                         $castings = findCastingByFilmId($_GET['id']);
@@ -35,7 +39,7 @@ include "db-functions.php";
                                         ?>
                     </div>
 
-                </div>
+               
             </div>
 
         </div> <?php
