@@ -14,7 +14,7 @@ include "db-functions.php";
                     <?php echo $row['nom_genre'] ?>
                 </div>
                 <div >
-                    <?php echo "<h5><a class='titreneon' href='ficheFilm.php?id=" . $row['ID_film'] . "'>" . $row['titre_film'] . "</a></h5>". $row['annee_sortie_film']  ?>
+                    <?php echo "<h5><a  href='ficheFilm.php?id=" . $row['ID_film'] . "'>" . $row['titre_film'] . "</a></h5>". $row['annee_sortie_film']  ?>
                 </div>
                 <div>
                     <a href='ficherealisateur.php?id=<?php echo $row['ID_realisateur'] ?>'><?php echo $row['nom_realisateur'] . " " . $row['prenom_realisateur'] ?></a>

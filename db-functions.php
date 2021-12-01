@@ -118,6 +118,32 @@ function findacteurById($id)
     $stmt->execute();
     return ($stmt->fetch());
 }
+/**
+ * Retourne tt les films en base de données
+ * 
+ * @return array|false un tableau contenant les champs du film ou FALSE si aucun produit n'a été récupéré
+ */
+function findAllActeur()
+{
+    $sql = "SELECT * FROM acteur";
+    $stmt = connexion()->prepare($sql);
+    $stmt->bindParam(":id", $id);
+    $stmt->execute();
+    return ($stmt->fetchall());
+}
+/**
+ * Retourne tt les genres en base de données
+ * 
+ * @return array|false un tableau contenant les champs du genres ou FALSE si aucun produit n'a été récupéré
+ */
+function findAllGenre()
+{
+    $sql = "SELECT * FROM genre";
+    $stmt = connexion()->prepare($sql);
+    $stmt->bindParam(":id", $id);
+    $stmt->execute();
+    return ($stmt->fetchall());
+}
 
 /**
  * Retourne le realisateur en base de données correspondant à l'id en paramètre

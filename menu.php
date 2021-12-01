@@ -7,6 +7,7 @@
             <?php
             if (isset($_SESSION['user'])) {
             ?>
+  
                 <a href="security.php?action=logout" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mon compte" class="nav-link fas fa-user-cog "><?= $_SESSION['user']['username'] ?></a>
                 <a href="security.php?action=logout" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Déconnexion" class="nav-link fas fa-user-alt-slash ">Déconnexion</a>
                 <a href="newacteur.php" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mon compte" class="nav-link ">New acteur</a>
